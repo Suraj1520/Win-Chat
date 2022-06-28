@@ -1,0 +1,290 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* body{
+    z-index: 0;
+} */
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+/* CSS for header file */
+header {
+    background-color: #337bfe;
+    color: white;
+    padding: 7px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* z-index: 1; */
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 32px;
+    margin-left: 22px;
+}
+
+.title img {
+    border-radius: 15px;
+}
+
+/* CSS for chat container */
+.container {
+    border: 0.5px solid;
+    border-color: #337bfe;
+    background-color: #eef4f7;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../Image/background1.jpg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    z-index: 0;
+}
+
+.user-window {
+    width: 300px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    /* border: 10px solid  #3ab1fc; */
+    background-color: #b7ddf6;
+    margin-right: 20px;
+    /* border-radius: 10px; */
+    /* color: white; */
+    /* background-color: aliceblue; */
+}
+
+.user-head {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    /* background-color: rgb(31, 62, 238); */
+}
+
+.user-head h4 {
+    background-color: #337bfe;
+    border-radius: 5px;
+    padding: 0px 8px;
+    color: white;
+}
+
+.user-list{
+    height: 60vh;
+    overflow-y: auto;
+}
+.user-list p {
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.chat-window {
+    width: 100%;
+    border-radius: 5px;
+    /* background-image:url('../texture1.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+
+    /* background-color: rgb(37, 240, 240); */
+}
+
+.chats {
+    height: 65vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.user-join {
+    font-size: 0.9rem;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: max-content;
+    color: white;
+    background-color: #337bfe;
+    margin-bottom: auto;
+    font-size: small;
+
+
+}
+
+.message {
+    padding: 5px 15px;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border-radius: 10px 50px 50px 10px;
+    background-color: white;
+}
+
+.message p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.outgoing {
+    margin-left: auto;
+    color: white;
+    text-align: right;
+    border-radius: 50px 10px 10px 50px;
+    background-color: #337bfe;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.user-input input {
+    background-color: white;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.user-input button {
+    padding: 5px 15px;
+    color: white;
+    background-color: #337bfe;
+    border-radius: 0px 50px 50px 0px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.container ::-webkit-scrollbar {
+    display: none;
+}
+
+/* CSS for responsiveness of the Q chat  */
+@media only screen and(max-width:1600px) {
+    main {
+        width: 95%;
+    }
+
+    header button {
+        display: block;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .user-window {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        height: max-content;
+        z-index: 11;
+        box-shadow: 0px 15px 20px -20px black;
+        display: none;
+    }
+}
+
+/* #logo{
+    display:block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
+body{
+    height: 100vh;
+    background-image:linear-gradient(rgb(129, 136, 240),rgb(238, 100, 238));
+}
+.container{
+    max-width: 955px; */
+/* background-color: rgb(239, 245, 245); */
+/* margin: auto;
+    height: 60vh;
+    padding:20px;
+    overflow-y: auto;
+    margin-bottom: 2px;
+}
+.user-join{
+    background-color: rgb(227, 224, 224);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 25%;
+    margin: 20px;
+    padding: 10px;
+    float:inherit;
+    clear:both;
+}
+.message{
+    background-color: rgb(227, 224, 224);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 25%;
+    margin: 20px;
+    padding: 10px;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}
+#send-container{
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 985px;
+    width: 100%;
+}
+#messageInp{
+    width: 92%;
+    height: 34px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+#btn{
+    cursor:pointer;
+    height: 34px;
+    border: 2px solid black;
+    border-radius: 6px;
+} */
